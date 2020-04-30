@@ -15,7 +15,7 @@ while(True):
 mysock.close()
 ```
 
-This action is so common that there is a library for it: `urllib`
+<br/>This action is so common that there is a library for it: `urllib`
 ```python
 import urllib.request, urllib.parse, urllib.error
 
@@ -24,7 +24,7 @@ for line in fhand:
     print(line.decode().strip())
 ```
 
-Note: The output of this will only contain text in the file. Headers are omitted.<br/>
+<br/>Note: The output of this will only contain text in the file. Headers are omitted.<br/>
 Using this method we can treat the document as a file!!!<br/>
 This can be used not only to read text files but also html pages.
 
