@@ -24,6 +24,7 @@ for line in fhand:
     print(line.decode().strip())
 ```
 
-Note: The output of this will only contain text in the file. Headers are omitted. 
+Note: The output of this will only contain text in the file. Headers are omitted.
+Using this method we can treat the document as a file!!!
 
 
