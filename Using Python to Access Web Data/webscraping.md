@@ -73,8 +73,8 @@ soup.find_all('p')[0].get_text()
 <br/><br/>
 
 #### Searching for tags by class and id
-We can use `find_all` method to search for elements by class or by id.<br/><br/>
-1) `p` tag that has class `outer-text`:
+We can use `find_all` method to search for elements by class or by id.
+<br/>1) `p` tag that has class `outer-text`:
 ```python
 soup.find_all('p', class_='outer-text')
 ```
