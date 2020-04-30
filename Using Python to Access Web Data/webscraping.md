@@ -21,6 +21,7 @@ for tag in tags:
 ```    
 <br/>
 When dealing with https we have to add these lines <br/>
+
 ```python
 import ssl
 ctx = ssl.create_default_context()
