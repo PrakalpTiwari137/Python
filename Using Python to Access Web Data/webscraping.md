@@ -5,6 +5,7 @@ sudo apt install python3-pip
 pip3 install bs4
 ```
 <br/>
+
 ```python
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
