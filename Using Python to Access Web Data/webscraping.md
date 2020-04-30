@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 url = input('Enter - ')
 html = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(html, 'html-parser')
+soup = BeautifulSoup(html, 'html.parser')
 
 # Retrieve all anchor tags
 tags = soup('a')
@@ -42,4 +42,51 @@ Right inside an `html` tag, we put two other tags, the `head` tag, and the `body
 `class` and `id` properties: One element can have multiple classes, and a class can be shared between elements. Each element can only have one id, and an id can only be used once on a page.<br/>
 
 #### Parsing a page with BeautifulSoup
+**Step1**: Download the website
+```python
+import urllib.request, urllib.parse, urllib.error
+
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+```
+<br/> **Step2**: Create an instance of `BeautifulSoup` class to parse our document:
+```python
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html, 'html.parser')
+```
+We can print the HTML content, formatted nicely, using `prettify` method
+```python
+print(soup.prettify())
+```
+Once we've isolated a tag, we can use the `get_text()` method to extract all of the text inside the tag.<br/><br/>
+
+#### Finding all instances of a tag at once
+`find_all` method finds all instances of a tag on a page.
+```python
+soup = BeautifulSoup(html, 'html.parser')
+soup.find_all('p')
+```
+**Note**: `find_all` returns a list. We have to loop through, or use list indexing to extract text:
+```python
+soup.find_all('p')[0].get_text()
+```
+<br/><br/>
+
+#### Searching for tags by class and id
+We can use `find_all` method to search for elements by class or by id.<br/><br/>
+1) `p` tag that has class `outer-text`:
+```python
+soup.find_all('p', class_='outer-text')
+```
+<br/>2) Any tag that has the class `outer-text`:
+```python
+soup.find_all(class_='outer-text')
+```
+<br/>3) Search for elements by id:
+```python
+soup.find_all(id='first')
+```
+<br/><br/>
+
+#### Using CSS Selectors
 
