@@ -89,4 +89,16 @@ soup.find_all(id='first')
 <br/><br/>
 
 #### Using CSS Selectors
+Examples of CSS selectors:<br/>
+1) `p a` - finds all `a` tags inside of a `p` tag<br/>
+2) `body p a` - finds all `a` tags inside of a `p` tag inside of a `body` tag.<br/>
+3) `p.outer-text` - finds all `p` tags with a class of *outer-text*.<br/>
+4) `p#first` - finds all `p` tags with an id of *first*<br/><br/>
+`BeautifulSoup` objects support searching a page via CSS selectors using the `select` method.
+```python
+soup.select('div p')
+```
+`select` method returns a list of `BeautifulSoup` objects, just like `find_all`.
+
+
 
