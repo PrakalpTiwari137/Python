@@ -19,3 +19,5 @@ info = json.loads(data)
 print('Name:', info["name'])
 print('Hide:', info["email"]["hide"])
 ```
+**Note**: JSON represents data as nested "lists" and "dictionaries".<br/>
+`json.loads()` returns list of dictionaries.<br/>
