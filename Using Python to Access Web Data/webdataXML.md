@@ -1,5 +1,5 @@
 ## Data formats
-### 1. XML (eXtensible Markup Language)
+### XML (eXtensible Markup Language)
 **Terminology**:<br/>
 ***1) Tags***  indicate the beginning and ending of elements.<br/>
 ***2) Attributes***  are keyword/value pairs on the opening tag of XML.<br/>
