@@ -41,3 +41,29 @@ a = PartyAnimal("Sally")
 <br/><br/>
 
 ### Object Inheritance
+When wwe make a new class - we can reuse an existing class and **inherit** all the capabilities of an exisiting class and then add our own little bit to make our new class.<br/>
+```python
+class PartyAnimal:
+    x = 0
+    name = ""
+    def __init__(self, nam):
+        ...
+    
+    def party(self):
+        ...
+
+#FootbalFan is a class which etends PartyAnimal. It has all capabilities that PartyAnimal has 
+class FootballFan(PartyAnimal):     
+    points = 0
+    def touchdown(self):
+        self.points = self.points + 7
+        self.party()
+        print(self.name,"points",self.points)
+        
+s = PartyAnimal("Sally")
+s.party()
+
+j = FootballFan("Jim")
+j.party()
+j.touchdown()
+```
